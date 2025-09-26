@@ -1,0 +1,68 @@
+/* reset simples */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, Arial, sans-serif; }
+
+body { background: #fafafa; color: #111; line-height: 1.4; }
+
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem; background:#000; color:#fff;
+}
+header h1 { font-size:1.25rem; }
+nav ul { list-style:none; display:flex; gap:1rem; }
+nav a { color:#fff; text-decoration:none; font-weight:600; }
+
+#hero { text-align:center; padding:3.5rem 1rem; background:#f3f3f3; }
+#hero h2 { font-size:1.6rem; margin-bottom:0.5rem; }
+
+section { padding:2.5rem 1rem; max-width:1100px; margin:0 auto; }
+
+.diagonal-track {
+  position: relative;
+  width: 100%;
+  height: 300px;               /* ajuste a altura conforme preferir */
+  overflow: hidden;           /* esconde partes fora da área */
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fff, #f8f8f8);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+/* imagens flutuantes */
+.diagonal-track .floating {
+  position: absolute;        /* posicionaremos via transform na animação */
+  width: 220px;              /* tamanho base; ajuste conforme necessário */
+  height: auto;
+  max-height: 220px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  object-fit: cover;
+  will-change: transform;
+  cursor: grab;
+  user-select: none;
+  /* cada imagem receberá a animação via JS (classes & estilos inline) */
+}
+
+/* animação padrão (caso queira fallback) */
+@keyframes slideDiag {
+  0%   { transform: translate(-150%, -40% ) rotate(-3deg); opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { transform: translate(0%, 0%) rotate(0deg); }
+  100% { transform: translate(150%, 40%) rotate(3deg); opacity: 0.9; }
+}
+
+/* pausa ao hover — função: pausamos animação via JS ao entrar com mouse */
+/* estilos responsivos */
+@media (max-width: 800px) {
+  .diagonal-track { height: 220px; }
+  .diagonal-track .floating { width: 140px; max-height: 140px; }
+}
+
+@media (max-width: 420px) {
+  .diagonal-track { height: 180px; }
+  .diagonal-track .floating { width: 110px; max-height: 110px; }
+}
+
+/* footer */
+footer { text-align:center; padding:1rem; color:#666; }

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RaigonLab</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RaigonLab - Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>RaigonLab</h1>
     <nav>
       <ul>
-        <li><a href="#design">Design</a></li>
-        <li><a href="#skinlab">Skin Lab</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#shop">Shop</a></li>
         <li><a href="#about">Sobre</a></li>
       </ul>
@@ -20,41 +19,40 @@
   </header>
 
   <section id="hero">
-    <h2>Bem-vindo ao RaigonLab</h2>
-    <p>Meu portfólio como Product Design Manager e Tatuador.</p>
+    <h2>Meu portfólio — Product Design & Tattoo</h2>
+    <p>Galeria em movimento diagonal</p>
   </section>
 
   <section id="portfolio">
     <h2>Portfólio</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="img1.jpg" alt="Projeto 1">
-        <h3>Projeto 1</h3>
-        <p>Descrição do projeto</p>
-      </div>
-      <div class="card">
-        <img src="img2.jpg" alt="Projeto 2">
-        <h3>Projeto 2</h3>
-        <p>Descrição do projeto</p>
-      </div>
-      <!-- Adicione mais cards aqui -->
+
+    <!-- container com overflow hidden -->
+    <div class="diagonal-track" aria-hidden="false">
+      <!-- coloque suas imagens aqui. Ex: assets/img1.jpg -->
+      <img class="floating" src="img1.jpg" alt="obra 1">
+      <img class="floating" src="img2.jpg" alt="obra 2">
+      <img class="floating" src="img3.jpg" alt="obra 3">
+      <img class="floating" src="img4.jpg" alt="obra 4">
+      <img class="floating" src="img5.jpg" alt="obra 5">
+      <!-- duplique quantas imagens quiser -->
     </div>
+
   </section>
 
   <section id="shop">
     <h2>Loja</h2>
-    <p>Em breve minhas obras digitais estarão disponíveis aqui!</p>
+    <p>Em breve: minhas obras digitais à venda</p>
   </section>
 
   <section id="about">
     <h2>Sobre</h2>
-    <p>Sou um tatuador e Product Design Manager apaixonado por arte e inovação.</p>
+    <p>Sou tatuador e Product Design Manager — arte e usabilidade.</p>
   </section>
 
   <footer>
-    <p>&copy; 2024 RaigonLab. Todos os direitos reservados.</p>
+    <p>&copy; RaigonLab</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
